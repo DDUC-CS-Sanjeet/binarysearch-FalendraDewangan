@@ -41,14 +41,13 @@ bool binarySearchIterative(int* array, int startIndex, int lastIndex, int elemen
             }
         }
         
-        
-    
   return false;
 }
 
 int main()
 {
 	int size,choice,x;
+	bool result1,result2;
 	cout<<"Enter the size of the array ";
 	cin>>size;
 	int ar[size];
@@ -69,12 +68,20 @@ int main()
 	switch(choice)
 	{
 		case 1:
-			cout<<binarySearchReacursive(ar,0,size,x);
+			 result1 = binarySearchReacursive(ar,0,size,x);
+			if(result1)
+				cout<<"true";
+			else
+				cout<<"false";
 			break;
 		
 		case 2:
-		cout<<binarySearchIterative(ar,0,size,x);
-		break;
+			 result2 = binarySearchIterative(ar,0,size,x);
+		if(result2)
+				cout<<"true";
+			else
+				cout<<"false";
+			break;
 			
 		default :
 			cout<<"invalid choice";
